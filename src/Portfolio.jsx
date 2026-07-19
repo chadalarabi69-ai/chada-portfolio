@@ -287,11 +287,55 @@ const SKILL_GROUPS = [
 ];
  
 const CERTIFICATES = [
-  { name: "Cisco Networking Basics", org: "Cisco Networking Academy", icon: Network },
-  { name: "Microsoft Office Specialist", org: "Microsoft", icon: Briefcase },
-  { name: "Microsoft 365 Copilot", org: "Microsoft", icon: Bot },
-  { name: "Linux Basics", org: "Independent Study", icon: Terminal },
-  { name: "Red Cross Certificate", org: "Moroccan Red Crescent", icon: HeartPulse },
+  {
+    name: "Cisco Networking Basics",
+    org: "Cisco Networking Academy",
+    description:
+      "Certificate covering networking fundamentals, TCP/IP, and basic network concepts.",
+    image: "/certificates/cisco.png",
+    link: "/certificates/cisco-certificate.pdf",
+    icon: Network,
+  },
+
+  {
+    name: "Microsoft Office Specialist",
+    org: "Microsoft",
+    description:
+      "Certification demonstrating skills in Microsoft Office applications.",
+    image: "/certificates/microsoft.png",
+    link: "#",
+    icon: Briefcase,
+  },
+
+  {
+    name: "Microsoft 365 Copilot",
+    org: "Microsoft",
+    description:
+      "Certificate about AI productivity tools and Microsoft Copilot.",
+    image: "/certificates/copilot.png",
+    link: "#",
+    icon: Bot,
+  },
+
+  {
+    name: "Linux Basics",
+    org: "Independent Study",
+    description:
+      "Learning Linux fundamentals, commands, and system basics.",
+    image: "/certificates/linux.png",
+    link: "#",
+    icon: Terminal,
+  },
+
+  {
+    name: "Red Cross Certificate",
+    org: "Moroccan Red Crescent",
+    description:
+      "Certificate in first aid and emergency response basics.",
+    image: "/certificates/redcross.png",
+    link: "#",
+    icon: HeartPulse,
+  },
 ];
  
 const PROJECTS = [
@@ -758,17 +802,31 @@ export default function Portfolio() {
                 <div
                   className={`group flex h-full flex-col rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-1.5 ${theme.card} ${theme.cardHover}`}
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/20 to-blue-500/5 text-blue-400 transition-transform duration-300 group-hover:scale-110">
-                    <cert.icon className="h-6 w-6" />
-                  </div>
-                  <h3 className="mt-5 text-base font-semibold">{cert.name}</h3>
-                  <p className={`mt-1 text-sm ${theme.subtext}`}>{cert.org}</p>
-                  <button
-                    onClick={() => showToast("Link this button to your certificate file.")}
-                    className="mt-5 flex items-center gap-1.5 text-sm font-medium text-blue-400 transition-colors hover:text-blue-300"
+                 <div className="overflow-hidden rounded-xl">
+                   <img
+                     src={cert.image}
+                     alt={cert.name}
+                     className="h-40 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                 </div>
+
+                  <h3 className="mt-5 text-base font-semibold">
+                    {cert.name}
+                    </h3>
+                    <p className={`mt-1 text-sm ${theme.subtext}`}>
+                      {cert.org}
+                    </p>
+                  <p className={`mt-3 text-sm leading-relaxed ${theme.subtext}`}>
+                     {cert.description}
+                   </p>
+                  <a
+                   href={cert.link}
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="mt-5 flex items-center gap-1.5 text-sm font-medium text-blue-400 transition-colors hover:text-blue-300"
                   >
                     View Certificate <ExternalLink className="h-3.5 w-3.5" />
-                  </button>
+                   </a>
                 </div>
               </Reveal>
             ))}
