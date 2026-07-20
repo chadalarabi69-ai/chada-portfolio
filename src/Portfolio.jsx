@@ -288,75 +288,128 @@ const SKILL_GROUPS = [
  
 const CERTIFICATES = [
   {
-    name: "Cisco Networking Basics",
-    org: "Cisco Networking Academy",
+    name: "Introduction to C",
+    org: "Sololearn",
     description:
-      "Certificate covering networking fundamentals, TCP/IP, and basic network concepts.",
-    image: "/certificates/cisco.png",
-    link: "/certificates/cisco-certificate.pdf",
+      "Completed the Introduction to C course on SoloLearn, learning C fundamentals, programming logic.",
+    image: "/certificates/cert1.jpg",
+    link: "https://www.sololearn.com/certificates/CC-OFY9Z5EU",
     icon: Network,
   },
 
   {
-    name: "Microsoft Office Specialist",
-    org: "Microsoft",
+    name: "C Intermediate",
+    org: "sololearn",
     description:
-      "Certification demonstrating skills in Microsoft Office applications.",
-    image: "/certificates/microsoft.png",
-    link: "#",
+      "Completed the C Intermediate course on SoloLearn, strengthening programming skills, control structures, functions, arrays, and problem-solving techniques.",
+    image: "/certificates/cert2.jpg",
+    link: "https://www.sololearn.com/certificates/CC-M8IDBPI7",
     icon: Briefcase,
   },
 
   {
-    name: "Microsoft 365 Copilot",
-    org: "Microsoft",
+    name: "Introduction to Python",
+    org: "Sololearn",
     description:
-      "Certificate about AI productivity tools and Microsoft Copilot.",
-    image: "/certificates/copilot.png",
-    link: "#",
+      "Completed the Python Introduction course , learning basics of Python programming, variables, data types, loops, and functions.",
+    image: "/certificates/cert3.jpg",
+    link: "https://www.sololearn.com/certificates/CC-C92UBZFF",
     icon: Bot,
   },
 
   {
-    name: "Linux Basics",
-    org: "Independent Study",
+    name: "Introduction to HTML",
+    org: "Simplilearn",
     description:
-      "Learning Linux fundamentals, commands, and system basics.",
-    image: "/certificates/linux.png",
-    link: "#",
+      "Learned the fundamentals of HTML, including structure, elements, and basic webpage creation.",
+    image: "/certificates/cert4.jpg",
+    link: " https://simpli-web.app.link/e/PTUegnozbZb ",
     icon: Terminal,
   },
 
   {
-    name: "Red Cross Certificate",
-    org: "Moroccan Red Crescent",
+    name: "Introduction to css",
+    org: "Simplilearn",
     description:
-      "Certificate in first aid and emergency response basics.",
-    image: "/certificates/redcross.png",
-    link: "#",
+      "Learned CSS basics to style web pages, including layouts, colors, and typography.",
+    image: "/certificates/cert5.jpg",
+    link: "https://simpli-web.app.link/e/CLLpgxxzbZb",
     icon: HeartPulse,
   },
+
+  {
+   name: "english certificated",
+   org: "EF SET ",
+   description: "Certified at B2 level by EF SET, demonstrating solid command of English at an upper-intermediate level. ",
+   image: "/certificates/cert6.jpg",
+   link:"https://cert.efset.org/en/qHhDFq" ,
+   icon: Code2,
+  },
+  {
+    name: "Introduction to Cybersecurity ",
+    org: "Cisco ",
+    description: " Successfully completed a Cisco training course in cybersecurity and networking fundamentals. This certification helped me build essential IT skills and strengthen my understanding of network security concepts. ",
+    image: "/certificates/cert7.png",
+    link: "https://www.credly.com/badges/aa92f49e-3947-422c-a28f-f40957198b66/public_url ",
+    icon: Terminal,
+  },
+
+  {
+    name: "Networking Basics",
+    org: "Cisco",
+    description: "Completed Cisco Networking Academy’s Networking Basics course, gaining fundamental knowledge of networking concepts, IP addressing, protocols, and network troubleshooting. ",
+    image: "/certificates/cert9.png",
+    link: "https://www.credly.com/badges/5f3205dc-fbe4-490d-9954-b7165153c8e5/public_url ",
+    icon: Bot,
+  },
+  
+   
+
 ];
  
 const PROJECTS = [
   {
-    title: "AusbildungAI",
+    title: "Flight Management System",
     description:
-      "An AI assistant that helps students discover and apply to German Ausbildung programs, offering smart matching and guided application support through a FastAPI backend.",
-    tech: ["Python", "FastAPI", "AI / NLP", "React"],
+      "A simple Flight Management System written in C. It manages flight data, supports flight search, and displays arrival times. Developed as part of a university practical.",
+    image: "/projects/project1.png",
+    tech: ["C", "Arrays ", "Functions", "Algorithms"],
+    demo: "#",
+    github: "https://github.com/chadalarabi69-ai/airport_flights.c.git",
+
   },
   {
-    title: "Berlin Eats",
+    title: "tkinter-calculator",
     description:
-      "A modern restaurant website concept with menu browsing, table reservations, and a clean, fully responsive interface tailored for a Berlin dining brand.",
-    tech: ["React", "Tailwind CSS", "Node.js"],
+      "A simple graphical calculator project using Python and Tkinter. Allows basic arithmetic operations through a user-friendly interface",
+    image: "/projects/project2.png",
+    tech: ["File Handling", "Caesar Cipher Encryption"],
+    demo: "#",
+    github: "https://github.com/chadalarabi69-ai/tkinter-calculator.git",
+
+
   },
   {
-    title: "Portfolio Website",
+    title: "Password Manager in C",
     description:
-      "This very site — a premium, responsive personal portfolio built with React, TypeScript, and Tailwind CSS, featuring glassmorphism and refined motion design.",
-    tech: ["React", "TypeScript", "Tailwind CSS"],
+      "A lightweight Password Manager developed in C. It securely stores credentials using basic encryption and file handling techniques. The program provides a clear, menu-driven interface for managing saved passwords.",
+    image: "/projects/project3.png",
+    tech: ["File Handling", "Caesar Cipher Encryption"],
+    demo: "#",
+     github: "https://github.com/chadalarabi69-ai/Smart-Password-Generator.git",
+
   },
+  {
+    title: "Login & Registration System",
+    description:
+      "A simple Login and Registration web application built with Python (Flask), MySQL, and HTML/CSS. This project demonstrates basic authentication functionality for learning and showcasing purposes..",
+    image: "/projects/project4.png",
+    tech: ["Python", "Flask","MySQL","HTML/CSS"],
+    demo: "#",
+     github: "https://github.com/chadalarabi69-ai/login_project.git",
+
+  },
+  
 ];
  
 /* ------------------------------------------------------------------ */
@@ -664,9 +717,9 @@ export default function Portfolio() {
             <Reveal delay={500}>
               <div className="mt-10 flex items-center gap-4">
                 {[
-                  { icon: FaLinkedin, label: "LinkedIn", href: "#" },
-                  { icon: FaGithub, label: "GitHub", href: "#" },
-                  { icon: Mail, label: "Email", href: "mailto:your.email@example.com" },
+                  { icon: FaLinkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/chada-larabi" },
+                  { icon: FaGithub, label: "GitHub", href: "https://github.com/chadalarabi69-ai" },
+                  { icon: Mail, label: "Email", href: "mailto:chadalarabi69@gmail.com" },
                 ].map(({ icon: Icon, label, href }) => (
                   <a
                     key={label}
@@ -682,7 +735,11 @@ export default function Portfolio() {
           </div>
  
           <Reveal delay={200}>
-            <AvatarIllustration />
+           <img
+             src="/profile.jpg"
+             alt="Chada Larabi"
+             className="relative mx-auto aspect-square w-full max-w-sm rounded-[2.5rem] object-cover border border-white/10 shadow-2xl"
+           />
           </Reveal>
         </div>
       </section>
@@ -769,7 +826,7 @@ export default function Portfolio() {
                     Relevant subjects
                   </p>
                   <div className="mt-3 flex flex-wrap gap-2">
-                    {["Programming", "Networking", "Databases", "Operating Systems", "Cybersecurity"].map(
+                    {["Programming", "Computer Networks", "Operating Systems 2", "Object-Oriented Programming", "Numerical Analysis"].map(
                       (subject) => (
                         <span
                           key={subject}
@@ -880,9 +937,13 @@ export default function Portfolio() {
                 <div
                   className={`group flex h-full flex-col overflow-hidden rounded-3xl border transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 ${theme.card} ${theme.cardHover}`}
                 >
-                  <div className="relative flex h-44 items-center justify-center overflow-hidden bg-gradient-to-br from-blue-600/30 via-slate-800 to-slate-900">
-                    <div className="absolute inset-0 opacity-30 [background-image:radial-gradient(circle_at_2px_2px,rgba(255,255,255,0.4)_1px,transparent_0)] [background-size:22px_22px]" />
-                    <Code2 className="h-12 w-12 text-blue-300/70 transition-transform duration-500 group-hover:scale-110" />
+                  <div className="relative h-44 overflow-hidden">
+                    <img
+                    src={project.image}
+                    alt={project.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+
                   </div>
                   <div className="flex flex-1 flex-col p-7">
                     <h3 className="text-lg font-semibold">{project.title}</h3>
@@ -901,13 +962,13 @@ export default function Portfolio() {
                     </div>
                     <div className="mt-6 flex gap-3">
                       <a
-                        href="#"
+                        href={project.demo}
                         className="flex flex-1 items-center justify-center gap-1.5 rounded-full bg-blue-500 px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-blue-400"
                       >
                         Live Demo <ExternalLink className="h-3.5 w-3.5" />
                       </a>
                       <a
-                        href="#"
+                        href={project.github}
                         className={`flex flex-1 items-center justify-center gap-1.5 rounded-full border px-4 py-2.5 text-xs font-semibold transition-colors ${theme.card} ${theme.cardHover}`}
                       >
                         GitHub < ExternalLink className="h-3.5 w-3.5" />
@@ -944,7 +1005,7 @@ export default function Portfolio() {
                   <div>
                     <p className={`text-xs uppercase tracking-wide ${theme.subtext}`}>Email</p>
                     <a href="mailto:your.email@example.com" className="text-sm font-medium hover:text-blue-400">
-                      your.email@example.com
+                      chadalarabi69@gmail.com
                     </a>
                   </div>
                 </div>
@@ -1030,9 +1091,9 @@ export default function Portfolio() {
           </p>
           <div className="flex items-center gap-3">
             {[
-              { icon: ExternalLink, href: "#" },
-              { icon: ExternalLink, href: "#" },
-              { icon: Mail, href: "mailto:your.email@example.com" },
+              { icon: FaGithub, href: "https://github.com/chadalarabi69-ai" },
+              { icon: FaLinkedin, href: "https://www.linkedin.com/in/chada-larabi" },
+              { icon: Mail, href: "mailto:chadalarabi69@gmail.com" },
             ].map(({ icon: Icon, href }, i) => (
               <a
                 key={i}
