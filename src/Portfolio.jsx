@@ -6,6 +6,7 @@ import {
   ArrowRight, CheckCircle2,
 } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
  
 /* ------------------------------------------------------------------ */
 /*  Hook: reveal an element once it enters the viewport                */
@@ -479,18 +480,46 @@ export default function Portfolio() {
     setMenuOpen(false);
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
- 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+  
     if (!form.name || !form.email || !form.message) {
       showToast("Please fill in your name, email, and message.");
       return;
     }
-    setSent(true);
-    showToast("Message sent! Chada will get back to you soon.");
-    setForm({ name: "", email: "", subject: "", message: "" });
-    setTimeout(() => setSent(false), 3000);
+  
+    try {
+      await emailjs.send(
+        "service_hgg1bmn",
+        "template_ikl010j",
+        {
+          name: form.name,
+          email: form.email,
+          subject: form.subject,
+          message: form.message,
+        },
+        "wc7ZWFFuLGOiwEwqI"
+      );
+  
+      setSent(true);
+      showToast("Message sent! Chada will get back to you soon.");
+  
+      setForm({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+  
+      setTimeout(() => setSent(false), 3000);
+  
+    } catch (error) {
+      console.log(error);
+      showToast("Failed to send message. Please try again.");
+    }
   };
+ 
+ 
  
   const theme = dark
     ? {
